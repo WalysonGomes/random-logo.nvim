@@ -1,3 +1,5 @@
-vim.api.nvim_create_autocmd(VimEnter, opts)({
-	require("random-logo").randomizer(),
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		require("random-logo").randomizer()
+	end,
 })
